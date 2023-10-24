@@ -1,0 +1,298 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+   overflow-x: hidden; 
+}
+
+input, button {
+    font-size: 16px;
+}
+
+header {
+    display: inline;
+}
+
+nav {
+    padding: 12px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #511281;
+    color: white;
+    position: sticky;
+    top: 0;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+}
+
+.nav-links ul li a {
+    display: flex;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #F0D9E7;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+nav i  {
+    display: none;
+}
+
+.container {
+   display: flex;
+   width: 100%;
+   padding: 20px;
+   border-radius: 10px;
+}
+
+.kiri {
+    flex-basis: 70%;
+}
+
+.kanan {
+    flex-basis: 30%;
+    padding-left: 25px;
+    text-align: center;
+    color: #511281;
+}
+
+.kanan img {
+    width: 150px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+aside section h3 {
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+table {
+    text-align: left;
+}
+
+th {
+    width: 30%;
+}
+
+td {
+    color: black;
+}
+
+.shadow {
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 3px 5px 6px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+}
+
+.shadow:hover {
+    box-shadow: 2px 5px 10px 0 #511281;
+}
+
+.input_section {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    background: #F8F9FA;
+}
+
+.input_section > h2 {
+    text-align: center;
+    color: #511281;
+}
+
+.input_section > form > .input {
+    margin: 25px 0;
+}
+
+.input_section > form > button {
+    background-color: #511281;
+    color: white;
+    border: 0;
+    border-radius: 20px;
+    display: block;
+    width: 100%;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.input_section > form > button > span {
+    font-weight: bold;
+}
+
+.input_section > form > .input > input {
+    margin-top: 15px;
+    display: block;
+    width: 100%;
+    padding: 8px 20px;
+    border-radius: 20px;
+    border: 0;
+    background-color: lightgrey;
+}
+
+.input_section > form > .input > input:focus {
+    outline: none;
+}
+
+.input_section > form > .input > label {
+    color: #511281;
+    font-weight: bold;
+}
+
+.input_section > form > .input_inline {
+    margin: 12px 0;
+    display: flex;
+    align-items: center;
+}
+
+.input_section > form > .input_inline > label {
+    color: #511281;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.book_shelf {
+    margin: 30px 0 0 0;
+    padding: 16px;
+    background: #F8F9FA;
+}
+
+.book_shelf > h2 {
+    color: #511281;
+    text-align: center;
+}
+
+.book_shelf > .book_list {
+    padding: 16px;
+}
+
+.book_shelf > .book_list > .book_item {
+    background: white;
+    padding: 8px 16px 16px 16px;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 3px 5px 6px 0 rgba(0, 0, 0, 0.1);
+}
+
+.book_shelf > .book_list > .book_item > h3, p {
+    margin: 8px 0;
+}
+
+.book_shelf > .book_list > .book_item > button {
+    padding: 8px 15px;
+    margin: 0 5px 0 0;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.book_shelf > .book_list > .book_item > .green {
+    background-color: white;
+    color: darkgreen;
+    border: 1px solid darkgreen;
+    transition: 0.5s;
+}
+
+.book_shelf > .book_list > .book_item > .green:hover {
+    background-color: darkgreen;
+    color: white;
+}
+
+.book_shelf > .book_list > .book_item > .red {
+    background-color: white;
+    color: darkred;
+    border: 1px solid darkred;
+    transition: 0.5s;
+}
+
+.book_shelf > .book_list > .book_item > .red:hover {
+    background-color: darkred;
+    color: white;
+}
+
+footer {
+    padding: 20px;
+    background-color: #511281;
+    text-align: center;
+    color: white;
+    background: #511281;
+}
+
+.biodata {
+    background: #F8F9FA;
+}
+
+@media screen and (max-width: 960px) {
+    .container {
+        padding: 20px;
+        flex-direction: column;
+    }
+    .kanan {
+        padding: 0px;
+        margin-top: 40px;
+        width: 100%;
+    }
+    .nav-links ul li {
+        display: block;
+    }
+    .nav-links {
+        position: absolute;
+        background: #511281;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+        opacity: 0.95;
+    }
+    nav i {
+        display: block;
+        color: #fff
+        margin: 10px;
+        font-size: 25px;
+        cursor: pointer;
+    }
+    nav .menu {
+        margin-left: 25px;
+    }
+    nav ul li a {
+        padding-bottom: 20px;
+    }
+    .nav-links ul {
+        padding: 30px;
+    }
+    .book_shelf > .book_list > .book_item > .action {
+        margin-top: 20px;
+    }
+    .book_shelf > .book_list > .book_item > .action > .red {
+        margin-top: 10px;
+}

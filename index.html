@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Perpustakaan Buku</title>
+    <link rel="icon" href="assets/logo.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css'>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Bookshelf Apps</h1>
+            <div class="nav-links" id="navLinks">
+                    <i class="menu"><img src="assets/kembali.png" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="#bukuBaru" class="scroll">Buku Baru</a></li>
+                        <li><a href="#belumDibaca" class="scroll">Belum Dibaca</a></li>
+                        <li><a href="#sudahDibaca" class="scroll">Sudah Dibaca</a></li>
+                    </ul>
+                </div>
+                <i class="menu"><img src="assets/menu.png" onclick="showMenu()"></i>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="kiri">
+                <section class="input_section shadow" id="bukuBaru">
+                <h2>Menambahkan Buku Baru</h2>
+                <form id="inputBook">
+                    <div class="input">
+                        <label for="inputBookTitle">Judul</label>
+                        <input id="inputBookTitle" type="text" required placeholder="Masukkan Judul Buku">
+                    </div>
+                    <div class="input">
+                        <label for="inputBookAuthor">Penulis</label>
+                        <input id="inputBookAuthor" type="text" required placeholder="Masukkan Nama Penulis Buku">
+                    </div>
+                    <div class="input">
+                        <label for="inputBookYear">Tahun</label>
+                        <input id="inputBookYear" type="number" required placeholder="Masukkan Tahun Pembuatan Buku">
+                    </div>
+                    <button id="bookSubmit" type="submit">Tambahkan Buku</button>
+                </form>
+            </section>
+
+            <section class="book_shelf shadow" id="belumDibaca">
+                <h2>Belum selesai dibaca</h2>
+                <div id="incompleteBookshelfList" class="book_list">
+                    
+                </div>
+            </section>
+
+            <section class="book_shelf shadow" id="sudahDibaca">
+                <h2>Selesai dibaca</h2>
+
+                <div id="completeBookshelfList" class="book_list">
+                    
+                </div>
+            </section>
+            </div>
+            <aside class="kanan">
+                <article class="shadow biodata">
+                    <header>
+                    <h2>Biodata Pembuat</h2>
+                    <p>Biodata ini dibuat sebagai Watermark website ini</p>
+                    <figure>
+                        <img src="assets/Foto.jpg">
+                    </figure>
+                </header>
+                <section>
+                    <h3>Informasi Lainnya</h3>
+                    <table cellspacing="10">
+                       <tr>
+                          <th>Nama</th>
+                          <td>Muhammad Alviriza Ramadhan</td>
+                       </tr>
+                       <tr>
+                          <th>TTL</th>
+                          <td>Surabaya, 11 Desember 2001</td>
+                       </tr>
+                       <tr>
+                          <th>Domisili</th>
+                          <td>Surabaya</td>
+                       </tr>
+                       <tr>
+                          <th>Usia</th>
+                          <td>19 Tahun</td>
+                       </tr>
+                       <tr>
+                          <th>Agama</th>
+                          <td>Islam</td>
+                       </tr>
+                       <tr>
+                          <th>Hobby</th>
+                          <td>Membaca</td>
+                       </tr>
+                       <tr>
+                          <th>E-mail</th>
+                          <td>dienalvira@gmail.com</td>
+                       </tr>
+                  </table>
+                </section>
+                </article>
+            </aside>
+        </div>
+            
+    </main>
+    <footer>
+        <p>Website Final Project Dicoding &#169; 2021, Muhammad Alviriza Ramadhan</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+    <script src="assets/jquery-3.6.0.min.js"></script>
+    <script src="assets/penyimpanan.js"></script>
+    <script src="assets/inti.js"></script>
+    <script src="assets/script.js"></script>
+</body>
+</html>
